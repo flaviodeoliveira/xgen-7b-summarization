@@ -1,0 +1,6 @@
+gradio
+torch
+transformers
+tiktoken
+accelerate
+bitsandbytes
