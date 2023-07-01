@@ -4,4 +4,5 @@ Gradio App to summarize texts using `xgen-7b-8k-inst` model, an **XGen-7B** mode
 * Salesforce's blog post: [Long Sequence Modeling with a 7B LLM Trained on 8K Input Sequence Lengt](https://blog.salesforceairesearch.com/xgen/)
 * HF `model card`: [xgen-7b-8k-inst](https://huggingface.co/Salesforce/xgen-7b-8k-inst)
 * Note that this demo doesn't run on a small resource Spaces' environment as it is. Try upgrading or try running on Colab <a href="https://colab.research.google.com/github/flaviodeoliveira/xgen-7b-summarization/blob/main/notebook/xgen-7b-summarization.ipynb" target="_blank"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
-</a>.
+</a>
+* Running this on CPU is pretty slow. If running on Google Colab, go to Runtime > Change runtime type > Hardware accelerator > GPU > GPU type > A100.
