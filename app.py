@@ -13,6 +13,7 @@ model = AutoModelForCausalLM.from_pretrained(
     "Salesforce/xgen-7b-8k-inst", 
     torch_dtype=torch.bfloat16,
     load_in_8bit = True if torch.cuda.is_available() else False,
+    device_map = "auto"
 )
 
 def summarize_fn(text):
@@ -53,8 +54,9 @@ title = """
 description = """
 `Salesforce/xgen-7b-8k-inst`: a **XGen-7B** model with standard dense attention (same as LLaMa) on up to **8K sequence length** for up to **1.5T tokens**, finetuned on public-domain instructional data.
 * HF `model card`: [xgen-7b-8k-inst](https://huggingface.co/Salesforce/xgen-7b-8k-inst)
-* Note that this demo doesn't run on a small resource environment, `basic CPU plan` (`2 vCPU, 16GB RAM`). Try to duplicate the space and run on a **GPU**.
-* Or try running on Colab.
+* Note that this demo doesn't run on a small resource environment, `basic CPU plan` (`2 vCPU, 16GB RAM`). Try to duplicate the space and run on a **GPU** (Spaces PRO)
+* Or try running on Colab <a href="https://colab.research.google.com/github/flaviodeoliveira/xgen-7b-summarization/blob/main/notebook/xgen-7b-summarization.ipynb" target="_blank"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
+</a>
 """
 
 article = "<p style='text-align: center'>Salesforce's blog post: <a href='https://blog.salesforceairesearch.com/xgen/' target='_blank'>Long Sequence Modeling with a 7B LLM Trained on 8K Input Sequence Length</a></p>"
